@@ -1,0 +1,38 @@
+import java.util.*;
+public class dsa {
+	
+	public static void main(String[] args) {
+		Scanner kb = new Scanner(System.in);
+		System.out.println("X1:");
+		int x1 = kb.nextInt();
+		System.out.println("Y1:");
+		int y1 = kb.nextInt();
+		System.out.println("X2:");
+		int x2 = kb.nextInt();
+		System.out.println("Y2:");
+		int y2 = kb.nextInt();
+		float slope = (x2-x1)/(y2-y1);
+		System.out.println("NUMERATOR:");
+		float n = kb.nextInt();
+		System.out.println("DENOMINATOR:");
+		float d = kb.nextInt();
+		float absx = Math.abs(x2-x1);
+		float absy = Math.abs(y2-y1);
+		float fracdistx = (x1 + n*absx/d);
+		float fracdisty = (x1 + n*absy/d);
+		float midptx = (x1+x2)/2;
+		float midpty = (y1+y2)/2;
+		int distance1 = (int) (Math.pow((x2-x1),2)+ Math.pow((y2-y1),2));
+		float distance2 = (float) Math.sqrt(distance1);
+		//distance formula is square root of x2-x1 sqrd + y2-y1 sqrd
+		//find midpoint formula
+		System.out.flush();
+		System.out.println("DISTANCE:" + distance2);
+		System.out.println("MIDPOINT:" +midptx + "," +midpty);
+		System.out.println("FRACTIONAL COORD:" + fracdistx + "," + fracdisty);
+		System.out.println("SLOPE: " + slope);
+		kb.close();
+		
+	}
+
+}
